@@ -1,0 +1,23 @@
+{
+  "pins" : [
+    {
+      "identity" : "lazylayout",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/lvnkmn/LazyLayout",
+      "state" : {
+        "revision" : "e8c71abc741ca590c85916cfde56def7128b5ace",
+        "version" : "0.0.1"
+      }
+    },
+    {
+      "identity" : "sourceseeds",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/lvnkmn/SourceSeeds",
+      "state" : {
+        "revision" : "27c567fb30b39e7b79725b4a50cb094b9e33abb0",
+        "version" : "0.0.1"
+      }
+    }
+  ],
+  "version" : 2
+}
