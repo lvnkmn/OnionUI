@@ -7,11 +7,12 @@
 
 import UIKit
 
-open class Control: UIControl {
+open class Control: UIControl, SettingUpViews {
 
     public override init(frame: CGRect) {
         super.init(frame: frame)
         addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(didTap)))
+        setupViews()
     }
     
     required public init?(coder: NSCoder) {
@@ -21,4 +22,10 @@ open class Control: UIControl {
     @objc func didTap() {
         sendActions(for: .touchUpInside)
     }
+    
+    
+    public func setupViewProperties() {}
+    public func setupViewHierarchy() {}
+    public func setupViewLayout() {}
+    public func setupViewColors() {}
 }
