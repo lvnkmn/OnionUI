@@ -17,7 +17,12 @@ public extension UIStackView {
 
     @discardableResult
     func addArrangedSubViews(@ArrayBuilder _ provideSubviews: () -> ([UIView])) -> Self {
-        provideSubviews().forEach(addArrangedSubview)
+        addArrangedSubViews(provideSubviews())
+    }
+    
+    @discardableResult
+    func addArrangedSubViews(_ arrangedSubViews: [UIView]) -> Self {
+        arrangedSubViews.forEach(addArrangedSubview)
         return self
     }
 
