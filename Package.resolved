@@ -5,8 +5,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/lvnkmn/LazyLayout",
       "state" : {
-        "revision" : "e8c71abc741ca590c85916cfde56def7128b5ace",
-        "version" : "0.0.1"
+        "revision" : "bee6989b478a7434b630807ee35ccf0909c3e83f",
+        "version" : "0.0.3"
       }
     },
     {

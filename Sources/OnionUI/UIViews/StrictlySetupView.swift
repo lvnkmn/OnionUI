@@ -19,8 +19,8 @@ open class StrictlySetupView: UIView, SettingUpViews {
         fatalError("init(coder:) has not been implemented")
     }
     
-    public func setupViewProperties() {}
-    public func setupViewHierarchy() {}
-    public func setupViewLayout() {}
-    public func setupViewColors() {}
+    open func setupViewProperties() {}
+    open func setupViewHierarchy() {}
+    open func setupViewLayout() {}
+    open func setupViewColors() {}
 }
