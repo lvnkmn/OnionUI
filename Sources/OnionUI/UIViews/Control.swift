@@ -23,9 +23,8 @@ open class Control: UIControl, SettingUpViews {
         sendActions(for: .touchUpInside)
     }
     
-    
-    public func setupViewProperties() {}
-    public func setupViewHierarchy() {}
-    public func setupViewLayout() {}
-    public func setupViewColors() {}
+    open func setupViewProperties() {}
+    open func setupViewHierarchy() {}
+    open func setupViewLayout() {}
+    open func setupViewColors() {}
 }
