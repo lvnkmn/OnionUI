@@ -69,4 +69,16 @@ public extension UIView {
 
         return self
     }
+    
+    @discardableResult
+    func setting(layerCornerRadius cornerRadius: CGFloat) -> Self {
+        self.layer.cornerRadius = cornerRadius
+        return self
+    }
+    
+    @discardableResult
+    func setting(backgroundColor: UIColor) -> Self {
+        self.backgroundColor = backgroundColor
+        return self
+    }
 }
