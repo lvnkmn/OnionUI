@@ -9,7 +9,7 @@ import UIKit
 
 open class Control: UIControl {
 
-    override init(frame: CGRect) {
+    public override init(frame: CGRect) {
         super.init(frame: frame)
         addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(didTap)))
     }
