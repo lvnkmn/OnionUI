@@ -83,6 +83,12 @@ public extension UIView {
     }
     
     @discardableResult
+    func setting(layerBorderColor borderColor: UIColor) -> Self {
+        self.layer.borderColor = borderColor
+        return self
+    }
+    
+    @discardableResult
     func setting(backgroundColor: UIColor) -> Self {
         self.backgroundColor = backgroundColor
         return self
