@@ -77,6 +77,12 @@ public extension UIView {
     }
     
     @discardableResult
+    func setting(layerBorderWidth borderWidth: CGFloat) -> Self {
+        self.layer.borderWidth = borderWidth
+        return self
+    }
+    
+    @discardableResult
     func setting(backgroundColor: UIColor) -> Self {
         self.backgroundColor = backgroundColor
         return self
