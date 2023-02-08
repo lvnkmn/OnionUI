@@ -71,6 +71,15 @@ public extension UIView {
     }
     
     @discardableResult
+    func archiveLayout() -> Self {
+        constraints.forEach {
+            $0.archived()
+        }
+
+        return self
+    }
+    
+    @discardableResult
     func setting(layerCornerRadius cornerRadius: CGFloat) -> Self {
         self.layer.cornerRadius = cornerRadius
         return self
