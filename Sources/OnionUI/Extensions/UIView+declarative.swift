@@ -114,4 +114,10 @@ public extension UIView {
         self.backgroundColor = backgroundColor
         return self
     }
+    
+    @discardableResult
+    func setting(clipsToBounds: Bool) -> Self {
+        self.clipsToBounds = clipsToBounds
+        return self
+    }
 }
