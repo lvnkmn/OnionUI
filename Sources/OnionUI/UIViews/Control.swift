@@ -18,10 +18,13 @@ open class Control: UIControl, SettingUpViews {
     public override init(frame: CGRect) {
         super.init(frame: frame)
         addGestureRecognizers {
-            UITapGestureRecognizer(target: self, action: #selector(didTouchUpInside))
+            UITapGestureRecognizer(target: self, action: #selector(didTouchUpInside)).mutator.mutate {
+                $0.delegate = self
+            }
             UILongPressGestureRecognizer(target:self, action: #selector(didTouchDown(usingRecognizer:)))
                 .mutator.mutate {
                     $0.minimumPressDuration = 0
+                    $0.delegate = self
                 }
         }
         setupViews()
@@ -47,4 +50,14 @@ open class Control: UIControl, SettingUpViews {
     open func setupViewHierarchy() {}
     open func setupViewLayout() {}
     open func setupViewColors() {}
+}
+
+extension Control: UIGestureRecognizerDelegate {
+    
+    public func gestureRecognizer(
+        _ gestureRecognizer: UIGestureRecognizer,
+        shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer
+    ) -> Bool {
+        true
+    }
 }
