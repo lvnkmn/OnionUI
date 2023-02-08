@@ -9,23 +9,12 @@ import UIKit
 
 open class Control: UIControl, SettingUpViews {
 
-    public private (set) var isHeld: Bool = false {
-        didSet {
-            setNeedsDisplay()
-        }
-    }
-    
     public override init(frame: CGRect) {
         super.init(frame: frame)
         addGestureRecognizers {
             UITapGestureRecognizer(target: self, action: #selector(didTouchUpInside)).mutator.mutate {
                 $0.delegate = self
             }
-            UILongPressGestureRecognizer(target:self, action: #selector(didTouchDown(usingRecognizer:)))
-                .mutator.mutate {
-                    $0.minimumPressDuration = 0
-                    $0.delegate = self
-                }
         }
         setupViews()
     }
@@ -34,15 +23,7 @@ open class Control: UIControl, SettingUpViews {
         fatalError("init(coder:) has not been implemented")
     }
     
-    @objc func didTouchDown(usingRecognizer recognizer: UIGestureRecognizer) {
-        guard recognizer.state == .began else { return }
-        
-        isHeld = true
-        sendActions(for: .touchDown)
-    }
-    
     @objc func didTouchUpInside() {
-        isHeld = false
         sendActions(for: .touchUpInside)
     }
     
