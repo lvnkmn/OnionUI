@@ -80,6 +80,12 @@ public extension UIView {
     }
     
     @discardableResult
+    func removeConstraints() -> Self {
+        removeConstraints(constraints)
+        return self
+    }
+    
+    @discardableResult
     func setting(layerCornerRadius cornerRadius: CGFloat) -> Self {
         self.layer.cornerRadius = cornerRadius
         return self
