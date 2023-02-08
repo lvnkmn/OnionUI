@@ -30,6 +30,12 @@ public extension UIView {
         provideSubviews().forEach(addSubview)
         return self
     }
+    
+    @discardableResult
+    func addGestureRecognizers(@ArrayBuilder _ provideGestureRecognizers: () -> ([UIGestureRecognizer])) -> Self {
+        provideGestureRecognizers().forEach(addGestureRecognizer)
+        return self
+    }
 
     @discardableResult
     func addSafelyPinnedSubView(_ provideSubview: () -> UIView) -> Self {
