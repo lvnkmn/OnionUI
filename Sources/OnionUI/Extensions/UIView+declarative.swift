@@ -12,7 +12,7 @@ import LazyLayout
 public extension UIView {
 
     @discardableResult
-    func layedOutWith(_ configureLayout: (UIView.Layout) -> ()) -> Self {
+    func layedOutWith(_ configureLayout: (_ layout: UIView.Layout) -> ()) -> Self {
         configureLayout(layout)
         return self
     }
