@@ -18,7 +18,7 @@ public extension UIView {
     }
 
     @discardableResult
-    func layout(_ configureLayout: (UIView.Layout) -> (), forSubviewThatsAdded provideSubView: () -> UIView) -> Self {
+    func layout(_ configureLayout: (_ layout: UIView.Layout) -> (), forSubviewThatsAdded provideSubView: () -> UIView) -> Self {
         let providedSubView = provideSubView()
         addSubview(providedSubView)
         configureLayout(providedSubView.layout)
