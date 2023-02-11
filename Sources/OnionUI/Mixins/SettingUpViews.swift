@@ -5,7 +5,7 @@
 //  Created by me on 07/02/2023.
 //
 
-import Foundation
+import UIKit
 
 public protocol SettingUpViews: SettingUpViewLayout, AnyObject {
     
@@ -27,4 +27,18 @@ public extension SettingUpViews {
     func setupViewHierarchy() {}
     func setupViewLayout() {}
     func setupViewColors() {}
+}
+
+public extension SettingUpViews where Self: RepresentingView {
+    
+    func relayout(animator: UIViewPropertyAnimator? = nil) {
+        view.removeConstraints()
+        setupViewLayout()
+
+        animator
+            .map {
+                $0.addAnimations(view.layoutIfNeeded)
+                $0.startAnimation()
+            } ?? view.layoutIfNeeded()
+    }
 }
