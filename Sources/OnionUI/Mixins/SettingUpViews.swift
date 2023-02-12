@@ -32,13 +32,13 @@ public extension SettingUpViews {
 public extension SettingUpViews where Self: RepresentingView {
     
     func relayout(animator: UIViewPropertyAnimator? = nil) {
-        view.removeConstraints()
+        representedView.removeConstraints()
         setupViewLayout()
 
         animator
             .map {
-                $0.addAnimations(view.layoutIfNeeded)
+                $0.addAnimations(representedView.layoutIfNeeded)
                 $0.startAnimation()
-            } ?? view.layoutIfNeeded()
+            } ?? representedView.layoutIfNeeded()
     }
 }
