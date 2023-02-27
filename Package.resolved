@@ -14,8 +14,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/lvnkmn/SourceSeeds",
       "state" : {
-        "revision" : "0679d6633cb4dfdbe41194a487837bf7438f051f",
-        "version" : "0.0.13"
+        "revision" : "e504ecfee4e244fe0d08ab2a814cb2358adf842b",
+        "version" : "0.0.14"
       }
     }
   ],
