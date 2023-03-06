@@ -113,4 +113,11 @@ public extension UIView {
         self.clipsToBounds = clipsToBounds
         return self
     }
+    
+    func verticalyScollable() -> UIScrollView {
+        UIScrollView()
+            .addVerticallyScolledContent {
+                self
+            }
+    }
 }
