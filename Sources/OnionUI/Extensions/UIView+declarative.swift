@@ -38,16 +38,9 @@ public extension UIView {
     }
 
     @discardableResult
-    func addSafelyPinnedSubView(_ provideSubview: () -> UIView) -> Self {
-        let subview = provideSubview()
-        addSubview(subview)
-        subview.layout.pin(toEdges: .all, of: safeAreaLayoutGuide)
-        return self
-    }
-
-    @discardableResult
     func addPinnedSubView(
         pinnedTo pinParent: LayoutConstrainable? = nil,
+        edges: [UIView.Layout.Edge] = .all,
         withPadding padding: UIEdgeInsets = .zero,
         _ provideSubview: () -> UIView) -> Self {
         let subview = provideSubview()
