@@ -23,7 +23,7 @@ open class Control: UIControl, SettingUpViews {
         fatalError("init(coder:) has not been implemented")
     }
     
-    @objc func didTouchUpInside() {
+    @objc open func didTouchUpInside() {
         sendActions(for: .touchUpInside)
     }
     
