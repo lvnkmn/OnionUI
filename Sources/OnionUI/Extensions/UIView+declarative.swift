@@ -26,7 +26,7 @@ public extension UIView {
     }
 
     @discardableResult
-    func addSubViews(@ArrayBuilder _ provideSubviews: () -> ([UIView])) -> Self {
+    func addSubViews(@NilFilteredArrayBuilder _ provideSubviews: () -> ([UIView])) -> Self {
         provideSubviews().forEach(addSubview)
         return self
     }
