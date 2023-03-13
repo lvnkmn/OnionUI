@@ -29,10 +29,10 @@ public extension SettingUpViews {
     func setupViewColors() {}
 }
 
-public extension SettingUpViews where Self: RepresentingView {
+public extension SettingUpViews where Self: RepresentingView, Self: HasTemporaryLayoutConstraints {
     
     func relayout(animator: UIViewPropertyAnimator? = nil) {
-        representedView.removeConstraints()
+        representedView.removeConstraints(temporaryLayoutConstraints.compactMap{ $0 })
         setupViewLayout()
 
         animator
