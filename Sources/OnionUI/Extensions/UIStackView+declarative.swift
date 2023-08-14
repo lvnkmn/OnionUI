@@ -16,7 +16,7 @@ public extension UIStackView {
     }
 
     @discardableResult
-    func addArrangedSubViews(@ArrayBuilder _ provideSubviews: () -> ([UIView])) -> Self {
+    func addArrangedSubViews(@NilFilteredArrayBuilder _ provideSubviews: () -> ([UIView])) -> Self {
         addArrangedSubViews(provideSubviews())
     }
     
