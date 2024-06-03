@@ -12,9 +12,10 @@ open class Control: UIControl, SettingUpViews {
     public override init(frame: CGRect) {
         super.init(frame: frame)
         addGestureRecognizers {
-            UITapGestureRecognizer(target: self, action: #selector(didTouchUpInside)).mutate {
-                $0.delegate = self
-            }
+            UITapGestureRecognizer(target: self, action: #selector(didTouchUpInside))
+                .mutated {
+                    $0.delegate = self
+                }
         }
         setupViews()
     }

@@ -3,19 +3,19 @@
     {
       "identity" : "lazylayout",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/lvnkmn/LazyLayout",
+      "location" : "git@github.com:lvnkmn/LazyLayout",
       "state" : {
-        "revision" : "3e5e432fda5388c7dfa0edba296fea69e6364377",
-        "version" : "0.0.5"
+        "revision" : "d4dfdd10fd9780169b8c4b35475bb72b97ac5658",
+        "version" : "1.0.0"
       }
     },
     {
       "identity" : "sourceseeds",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/lvnkmn/SourceSeeds",
+      "location" : "git@github.com:lvnkmn/SourceSeeds",
       "state" : {
-        "revision" : "85063e7d94a0d8cc02cf40ad3bf1a3c574a5dd89",
-        "version" : "0.0.17"
+        "revision" : "11a4df040c2803acd70f0d19ef221c64df61d277",
+        "version" : "1.0.1"
       }
     }
   ],
