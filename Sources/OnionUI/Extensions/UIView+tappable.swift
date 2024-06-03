@@ -8,7 +8,6 @@
 import UIKit
 import OnionUI
 
-#warning("Todo: Move to onionUI")
 public extension UIView {
     func tappable(_ onTap: @escaping () -> ()) -> Control {
         .init()
