@@ -4,8 +4,7 @@
 import PackageDescription
 
 let package = Package(
-    name: "OnionUI", 
-    platforms: [.iOS(.v14)],
+    name: "OnionUI",
     products: [
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
