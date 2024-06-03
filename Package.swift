@@ -14,7 +14,7 @@ let package = Package(
     dependencies: [
         // Dependencies declare other packages that this package depends on.
         // .package(url: /* package url */, from: "1.0.0"),
-        .package(url: "https://github.com/lvnkmn/SourceSeeds", .upToNextMajor(from: Version(0, 0, 1))),
+        .package(url: "https://github.com/lvnkmn/SourceSeeds", .upToNextMajor(from: Version(1, 0, 0))),
         .package(url: "https://github.com/lvnkmn/LazyLayout", .upToNextMajor(from: Version(0, 0, 1)))
     ],
     targets: [
